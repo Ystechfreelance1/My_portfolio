@@ -1,0 +1,171 @@
+/* ===============================
+   Footer Base
+================================ */
+.footer {
+  position: relative;
+  background: #020617;
+  color: #e5e7eb;
+  padding: 80px 20px 40px;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===============================
+   Background Glow Effect
+================================ */
+.footer-bg-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(56, 189, 248, 0.18),
+      transparent 55%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===============================
+   Inner Wrapper
+================================ */
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Name / Logo
+================================ */
+.footer-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.footer-name .code {
+  color: #38bdf8;
+}
+
+/* ===============================
+   Role Text
+================================ */
+.footer-role {
+  font-size: 15px;
+  color: #9ca3af;
+  margin-bottom: 26px;
+}
+
+/* ===============================
+   Divider
+================================ */
+.footer-divider {
+  width: 70px;
+  height: 3px;
+  margin: 0 auto 30px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+}
+
+/* ===============================
+   Social Icons
+================================ */
+.footer-socials {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Icon container */
+.footer-socials a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover */
+.footer-socials a:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.35),
+    rgba(14, 165, 233, 0.35)
+  );
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.45);
+}
+
+/* SVG Icon */
+.footer-socials svg {
+  width: 21px;
+  height: 21px;
+  fill: #e5e7eb;
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon hover */
+.footer-socials a:hover svg {
+  fill: #38bdf8;
+  transform: scale(1.12);
+}
+
+/* ===============================
+   Copyright
+================================ */
+.footer-copy {
+  margin-top: 34px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 480px) {
+  .footer {
+    padding: 60px 16px 32px;
+  }
+
+  .footer-name {
+    font-size: 24px;
+  }
+
+  .footer-role {
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    gap: 18px;
+  }
+
+  .footer-socials a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-socials svg {
+    width: 19px;
+    height: 19px;
+  }
+}

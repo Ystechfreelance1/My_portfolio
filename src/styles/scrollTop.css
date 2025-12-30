@@ -1,0 +1,39 @@
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #38bdf8;
+  color: #020617;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  z-index: 999;
+}
+
+/* Hover */
+.scroll-top-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.6);
+}
+
+/* Active (click) */
+.scroll-top-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}

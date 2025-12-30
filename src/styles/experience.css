@@ -1,0 +1,164 @@
+.experience-section {
+  padding: 100px 16px;
+  background: #020617;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Title */
+.experience-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.experience-subtitle {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+/* Timeline */
+.experience-timeline {
+  margin-top: 60px;
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Item */
+.experience-item {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Dot */
+.timeline-dot {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.timeline-dot::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border-radius: 50%;
+  margin-top: 8px;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+}
+
+/* Card */
+.experience-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px 24px;
+  flex: 1;
+  transition: transform 0.25s ease, border 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+/* Header */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.experience-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.experience-period {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* Company */
+.experience-company {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* Bullets */
+.experience-bullets {
+  margin-top: 14px;
+  padding-left: 18px;
+}
+
+.experience-bullets li {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+/* INITIAL STATE */
+.experience-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Slide directions */
+.slide-left {
+  transform: translateX(-60px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+
+/* SHOW STATE */
+.experience-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Smooth feel */
+.experience-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-timeline::before {
+    left: 8px;
+  }
+
+  .experience-item {
+    gap: 18px;
+  }
+}

@@ -1,0 +1,119 @@
+/* Floating Button - Bottom Right */
+.ai-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  color: #020617;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+  z-index: 1000;
+}
+
+/* AI Panel - RIGHT SIDE */
+.ai-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 360px;
+  max-height: 520px;
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  /* Animation */
+  animation: slideInRight 0.35s ease-out;
+}
+
+/* Header */
+.ai-header {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+}
+
+/* Body */
+.ai-body {
+  padding: 14px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Messages */
+.ai-msg {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.ai-msg.user {
+  color: #e5e7eb;
+}
+
+.ai-msg.assistant {
+  color: #94a3b8;
+}
+
+/* Footer */
+.ai-footer {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-footer input {
+  flex: 1;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.ai-footer button {
+  padding: 10px 16px;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Note */
+.ai-note {
+  font-size: 0.7rem;
+  color: #64748b;
+  text-align: center;
+  padding: 6px;
+}
+
+/* Slide-in animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ai-panel {
+    width: calc(100% - 32px);
+    right: 16px;
+  }
+}
