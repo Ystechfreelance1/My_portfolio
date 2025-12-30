@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PROFILE } from "../data/profile";
 import { i } from "framer-motion/client";
-import "../styles/ai-Assistant.css";
+import "../styles/ai-assistant.css";
 export default function AIAssistant() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
